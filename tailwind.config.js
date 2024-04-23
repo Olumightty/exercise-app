@@ -11,6 +11,7 @@ export default {
         secondary: "#fff",
         dimGray: "#C5C5C5",
         navy: "#05043C",
+        compYell: "#6575a2"
 
       },
       fontFamily: {

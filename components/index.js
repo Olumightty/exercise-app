@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import ExcerciseList from "./ExcerciseList";
 import ListItem from "./ListItem";
 import Carasel from "./Carasel";
+import Suggestions from "./Suggestions";
 
 
 export {
@@ -17,4 +18,5 @@ export {
     ExcerciseList,
     ListItem,
     Carasel,
+    Suggestions,
 }

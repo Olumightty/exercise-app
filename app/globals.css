@@ -34,7 +34,6 @@
   opacity: 0.7;
 }
 
-
 ul{
   list-style: none;
 }
@@ -51,6 +50,21 @@ ul{
 .listItem:hover{
   scale: 1.1;
   box-shadow: 3px 2px 20px #B9B96E;
+}
+
+.excercise-card{
+  opacity: .6;
+  transition: .2s ease-in;
+}
+
+.no-scroll::-webkit-scrollbar{
+  width: 0;
+}
+
+.excercise-card:hover{
+  scale: 1.05;
+  border-top: 4px solid rgba(238, 238, 130, 1);
+  opacity: 1;
 }
 
 
