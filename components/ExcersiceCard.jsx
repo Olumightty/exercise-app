@@ -9,11 +9,11 @@ const ExcersiceCard = ({ id, src, target, bodyPart, equipment, name }) => {
       </div>
       <div className='text-white'>
         <div className='flex items-center gap-4 my-4 flex-wrap'>
-          <p className='px-4 py-2 bg-navy rounded-2xl w-fit cursor-pointer'>{target}</p>
-          <p className='px-4 py-2 bg-pink-300 rounded-2xl w-fit cursor-pointer'>{bodyPart}</p>
-          <p className='px-4 py-2 bg-compYell rounded-2xl w-fit cursor-pointer'>{equipment}</p>
+          <Link href={`/excercises/${target}`}><p className='px-4 py-2 bg-navy rounded-2xl w-fit cursor-pointer hover:opacity-65'>{target}</p></Link>
+          <Link href={`/excercises/${bodyPart}`}><p className='px-4 py-2 bg-pink-300 rounded-2xl w-fit cursor-pointer hover:opacity-65'>{bodyPart}</p></Link>
+          <Link href={`/excercises/${equipment}`}><p className='px-4 py-2 bg-compYell rounded-2xl w-fit cursor-pointer hover:opacity-65'>{equipment}</p></Link>
         </div>
-        <Link href={`/exercises/exercise/${id}`}><h1 className='text-primary text-3xl max-w-xs hover:text-dimGray'>{name}</h1></Link>
+        <Link href={`/excercises/exercise/${id}`}><h1 className='text-primary text-3xl max-w-xs hover:text-dimGray'>{name}</h1></Link>
         
       </div>
     </div>

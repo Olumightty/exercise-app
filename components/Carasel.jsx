@@ -29,8 +29,8 @@ const Carasel = ({ data }) => {
     }
 
   return (
-    <div ref={scrollRef} className='flex items-center flex-nowrap sm:grid sm:grid-cols-2 md:flex md:flex-row flex-col w-full px-4 py-4 overflow-x-scroll overflow-y-hidden no-scroll'>
-        {data.map((da,i) => <Link key={i} href={`/exercises/${da}`}><ListItem title={da}/></Link>)}
+    <div ref={scrollRef} className='flex items-center flex-nowrap sm:grid sm:grid-cols-2 md:flex md:flex-row flex-col w-full px-4 py-4 overflow-x-scroll overflow-y-hidden no-scroll hide-arrows'>
+        {data.map((da,i) => <Link key={i} href={`/excercises/${da}`}><ListItem title={da}/></Link>)}
         <BsArrowLeftCircle onClick={() => scroll("left")} className=' md:opacity-100 opacity-0 absolute  left-0 cursor-pointer' color="fff" size={40}/>
         <BsArrowRightCircle onClick={() => scroll("right")} className=' md:opacity-100 opacity-0 absolute right-0 cursor-pointer' color="fff" size={40}/>
       </div>
