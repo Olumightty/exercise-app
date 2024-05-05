@@ -5,7 +5,7 @@ const ExcersiceCard = ({ id, src, target, bodyPart, equipment, name }) => {
     <div className='p-4  w-fit bg-black excercise-card cursor-pointer relative'>
       <div className='relative'>
         <div className='absolute top-0 left-0 w-full h-full'></div>
-        <iframe width={360} height={360} src={src} frameborder="0"></iframe>
+        <iframe width={360} height={360} src={src} frameBorder="0"></iframe>
       </div>
       <div className='text-white'>
         <div className='flex items-center gap-4 my-4 flex-wrap'>

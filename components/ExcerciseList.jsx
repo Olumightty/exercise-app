@@ -1,24 +1,31 @@
 'use client'
 import { useEffect, useState } from "react"
 import { Carasel } from "."
-import { getList } from "@/lib/actions"
 import { notFound } from "next/navigation"
 
 
 
-const ExcerciseList = ({ initialCategory }) => {
+const ExcerciseList = ({ category }) => {
   const [listOfCategories, setListOfCategories] = useState([])
 
   useEffect(() => {
-    setListOfCategories(initialCategory);
+    setListOfCategories(category.bodyPart);
   }, [])
 
  async function getCategory  (event){
-    const data = await getList(event.target.value)
-    if(!data){
-      notFound();
+    switch (event.target.value) {
+      case 'bodyPart':
+        setListOfCategories(category.bodyPart);
+        break;
+      case 'target':
+        setListOfCategories(category.target)
+        break;
+      case 'equipment':
+        setListOfCategories(category.equipment)
+        break;
+      default:
+        notFound();
     }
-    setListOfCategories(data)
     
   }
   return (
