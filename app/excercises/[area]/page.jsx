@@ -29,7 +29,7 @@ export default async function AOC({ params }){
     return(
         <div className='sm:px-32 px-8 py-16 '>
             <h1 className='text-dimGray font-poppins text-5xl mb-16 font-semibold'>{params.area.replace("%20", " ").toUpperCase()}</h1>
-            <Suspense fallback={<p className='flash text-center text-primary font-poppins'>{`Loading ${params.area.replace("%20", " ")}`}</p>}>
+            <Suspense fallback={<p className='flash text-center text-primary font-poppins'>{`Loading ${params.area.replace("%20", " ")}...`}</p>}>
                 <AwaitAOC params = {params}/>
             </Suspense>
         </div>
