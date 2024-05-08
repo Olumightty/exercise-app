@@ -2,6 +2,12 @@ import { getAnExercise } from "@/lib/actions"
 import Link from "next/link"
 import { Suspense } from "react"
 
+export async function generateMetadata({ params }) {
+    return {
+      title: 'Exercise ' + params.id,
+    }
+  }
+
 async function AwaitDetails({ params }){
     const data = await getAnExercise(params.id)
     return(

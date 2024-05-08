@@ -5,6 +5,11 @@ import { Suspense } from "react"
 
 
 
+export async function generateMetadata({ params }) {
+    return {
+      title: params.area,
+    }
+  }
 async function AwaitAOC({ params }){
     let data
     const category = await categories()
