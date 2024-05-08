@@ -3,7 +3,12 @@ import { getSuggestions, categories } from "@/lib/actions";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
+export const metadata = {
+    title: "Exercises",
+    description: "Find Exercise",
+  };
 
+  
 async function GetSuggest(){
     const suggested = await getSuggestions() //Obtain data for 10 random excercises
 

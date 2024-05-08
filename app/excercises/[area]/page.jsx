@@ -3,6 +3,8 @@ import { notFound } from "next/navigation"
 import { Suggestions } from "@/components"
 import { Suspense } from "react"
 
+
+
 async function AwaitAOC({ params }){
     let data
     const category = await categories()

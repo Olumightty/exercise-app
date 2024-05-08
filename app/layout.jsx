@@ -3,7 +3,7 @@ import "./globals.css";
 
 
 export const metadata = {
-  title: "Work-Out Kings",
+  title: "Work-Out King",
   description: "Reach your fitness goals",
 };
 
