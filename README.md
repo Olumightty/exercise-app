@@ -13,7 +13,7 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.jsx`. 
-Website was built with [`exercisedb api`](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb) from rapidapi
+Website data from [`exercisedb api`](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb)
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
