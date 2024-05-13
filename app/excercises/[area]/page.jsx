@@ -10,6 +10,8 @@ export async function generateMetadata({ params }) {
       title: params.area,
     }
   }
+
+  
 async function AwaitAOC({ params }){
     let data
     const category = await categories()
