@@ -32,6 +32,7 @@ const Suggestions = ({data}) => {
         {visibleData.map((da) => <ExcersiceCard key={da.id} id = {da.id} src={da.gifUrl} target={da.target} bodyPart={da.bodyPart} equipment={da.equipment} name={da.name}/>)}
       </div>
       <PaginationButtons buttonArray = {pages} changePage={changePage} currentPage={currentPage}/>
+      
     </>
     
   )
