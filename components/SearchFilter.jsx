@@ -2,6 +2,7 @@
 import { useSearchParams } from "next/navigation"
 import { Suggestions } from "."
 
+
 const SearchFilter = ({data}) => {
     const searchParams = useSearchParams()
     const query = searchParams.get('query')
@@ -20,7 +21,7 @@ const SearchFilter = ({data}) => {
         <>
             {filteredData.length > 0 
                 ? <Suggestions data={filteredData}/>
-                : <p className='text-dimGray text-center text-3xl font-medium'>Search not found</p>
+                : <p className='text-dimGray text-center text-3xl font-medium'>{`"${query}" Not Found`}</p>
             }
            
         </>
