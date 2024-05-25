@@ -1,11 +1,12 @@
 'use client'
 
-import { navigateToSearch } from "@/lib/actions";
-import { search } from "@/redux/action";
+import { search  } from "@/redux/action";
+import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 const SearchBar = () => {
+    const router = useRouter()
     const searchTerm = useSelector((state) => state.searchTerm)
     const dispatch = useDispatch()
     const [isearch, setIsearch] = useState(false);
@@ -22,7 +23,10 @@ const SearchBar = () => {
     async function handleSearch(event){
         if(event.key == 'Enter'){
             //this is a server action which will redirect to the search link
-            navigateToSearch(searchTerm)
+            // dispatch(searching(true))
+            // navigateToSearch(searchTerm)
+            //this will redirect to search link
+            router.push(`/excercises/search?query=${searchTerm}`)
         }
     }
   return (
