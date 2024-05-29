@@ -3,7 +3,7 @@ import { IoIosFitness } from "react-icons/io";
 import Link from "next/link";
 import { SearchBar } from ".";
 import { useState } from "react";
-import { FaAddressBook } from "react-icons/fa";
+import { RxDropdownMenu, RxCross2 } from "react-icons/rx";
 
 const NavLink = ({ setIsVisible }) => {
   return(
@@ -26,11 +26,11 @@ const NavBar = () => {
         </ul>
         <div className="sm:hidden visible relative">
           {isVisible 
-            ? <FaAddressBook onClick={() => setIsVisible(false)} size={50}/>
-            : <IoIosFitness onClick={() => setIsVisible(true)} size={50}/>
+            ? <RxCross2 onClick={() => setIsVisible(false)} size={30}/>
+            : <RxDropdownMenu onClick={() => setIsVisible(true)} size={30}/>
           }
           {isVisible && (
-            <ul className="absolute bg-primary nav-link font-poppins font-medium mt-4 left-0 flex flex-col justify-center items-center z-10 py-2 px-4 transition">
+            <ul className="absolute bg-primary nav-link font-poppins font-medium mt-6 left-0 flex flex-col justify-center items-center z-10 py-2 px-4 transition">
               <NavLink setIsVisible={setIsVisible}/>
             </ul>
           )}
