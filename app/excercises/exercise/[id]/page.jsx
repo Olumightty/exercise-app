@@ -18,8 +18,8 @@ async function AwaitDetails({ params }){
                 <Link href={`/excercises/${data.target}`}><p className='px-4 py-2 bg-navy rounded-2xl w-fit cursor-pointer hover:opacity-65 text-white'>{data.target}</p></Link>
                 <Link href={`/excercises/${data.equipment}`}><p className='px-4 py-2 bg-navy rounded-2xl w-fit cursor-pointer hover:opacity-65 text-white'>{data.equipment}</p></Link>
             </section>
-            <section className='flex items-center'>
-                <div className='mt-8 mr-16 slide-right'>
+            <section className='flex sm:flex-row flex-col items-center justify-center sm:justify-start'>
+                <div className='sm:ml-0 ml-16 mt-8 mr-16 slide-right'>
                     <iframe width={360} height={360} src={data.gifUrl} frameborder="0"></iframe>
                     <h2 className='text-dimGray font-poppins list-disc mt-4 font-semibold'>Also Works the:</h2>
                     <div className='flex'>
@@ -27,7 +27,7 @@ async function AwaitDetails({ params }){
                     </div>
                 </div>
                 <div className="slide-top">
-                    <h3 className='text-primary font-poppins text-5xl font-bold'>Instructions:</h3>
+                    <h3 className='text-primary font-poppins sm:text-5xl text-3xl font-bold sm:mt-0 mt-8'>Instructions:</h3>
                     <ul className='text-dimGray font-poppins font-semibold list-disc mt-8 flex flex-col gap-4'>
                         {data.instructions.map((instruct, i) => <li key={i}>{instruct}</li>)}
                     </ul>

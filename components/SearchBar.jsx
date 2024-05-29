@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-const SearchBar = () => {
+const SearchBar = ({setIsVisible}) => {
     const router = useRouter()
     const searchTerm = useSelector((state) => state.searchTerm)
     const dispatch = useDispatch()
@@ -26,17 +26,18 @@ const SearchBar = () => {
             // dispatch(searching(true))
             // navigateToSearch(searchTerm)
             //this will redirect to search link
+            setIsVisible ? setIsVisible(false) : null
             router.push(`/excercises/search?query=${searchTerm}`)
         }
     }
   return (
-    <div className='flex items-center gap-2'>
+    <div className='flex items-center sm:gap-2 gap-0 sm:flex-row flex-col'>
         <p onClick={showSearch} className='cursor-pointer'>Search</p>
         
             {isearch && (
                 <div className='flex items-center gap-2 px-2 py-2'>
-                    <input value={searchTerm} onKeyDown={handleSearch} onChange={(event) => dispatch(search(event.target.value))} ref={searcRef} className='rounded-xl outline-none border-none px-2' type='search' />
-                    <FaSearch className='cursor-pointer' color='#000' size={20}/>
+                    <input value={searchTerm} onKeyDown={handleSearch} onChange={(event) => dispatch(search(event.target.value))} ref={searcRef} className='rounded-xl outline-none border-none px-2 sm:w-full es:w-[180px]' type='search' />
+                    <FaSearch className='cursor-pointer sm:block hidden' color='#000' size={20}/>
                 </div>
                 
             )}

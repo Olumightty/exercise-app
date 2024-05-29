@@ -20,7 +20,10 @@ const SearchFilter = ({data}) => {
     return(
         <>
             {filteredData.length > 0 
-                ? <Suggestions data={filteredData}/>
+                ? <>
+                    <p className='text-dimGray text-left text-3xl font-medium mb-8'>{`Showing result for "${query}"`}</p>
+                    <Suggestions data={filteredData}/>
+                  </>
                 : <p className='text-dimGray text-center text-3xl font-medium'>{`"${query}" Not Found`}</p>
             }
            

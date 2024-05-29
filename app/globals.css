@@ -125,6 +125,9 @@ ul{
 .slide-top{
   animation: slide-top .5s ease-in;
 }
+.transition{
+  transition: .5s ease-in-out;
+}
 
 @-webkit-keyframes slide-top {
   0% {

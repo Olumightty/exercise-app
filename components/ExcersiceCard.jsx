@@ -2,7 +2,7 @@ import Link from "next/link"
 
 const ExcersiceCard = ({ id, src, target, bodyPart, equipment, name }) => {
   return (
-    <div className='p-4  w-fit bg-black excercise-card cursor-pointer relative'>
+    <div className='p-4  w-fit bg-black excercise-card cursor-pointer relative h-[550px]'>
       <div className='relative'>
         <div className='absolute top-0 left-0 w-full h-full'></div>
         <iframe width={360} height={360} src={src} frameBorder="0"></iframe>
