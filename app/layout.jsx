@@ -5,7 +5,7 @@ import StoreProvider from "@/redux/StoreProvider";
 
 export const metadata = {
   title: "Work-Out Library",
-  description: "Reach your fitness goals",
+  description: "Explore workout options",
 };
 
 export default function RootLayout({ children }) {
