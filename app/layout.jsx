@@ -4,7 +4,7 @@ import StoreProvider from "@/redux/StoreProvider";
 
 
 export const metadata = {
-  title: "Work-Out King",
+  title: "Work-Out Library",
   description: "Reach your fitness goals",
 };
 
